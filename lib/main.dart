@@ -33,7 +33,7 @@ class _CounterPageState extends State<CounterPage> {
   void _incrementCounter() {
     // INTENTIONAL ERROR: setState is called but counter is not actually incremented inside it
     setState(() {
-      //_counter++; // Candidate needs to uncomment this
+      _counter++; // Candidate needs to uncomment this
     });
     // _counter++; // OR move this inside setState
   }
@@ -59,7 +59,7 @@ class _CounterPageState extends State<CounterPage> {
       floatingActionButton: FloatingActionButton(
         // INTENTIONAL ERROR: Missing function call
         onPressed: () {
-          // Oops, forgot to call _incrementCounter
+          _incrementCounter();
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
@@ -67,4 +67,3 @@ class _CounterPageState extends State<CounterPage> {
     );
   }
 }
-
